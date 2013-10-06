@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CAC40 Intraday</title>
+</head>
+<body>
+	
+	<h2>Welcome to the CAC40 Intraday Parser and Analyser (PandA)</h2>
+
+	<h3>Configuration options :</h3>
+
+	<form id="myForm" enctype="multipart/form-data" action="/pandify" method="post">
+		<ul>
+			<li>
+				Input file
+				<input class="inputFile" type="file" name="inputFile" />
+			</li>
+			<li>
+				Export filename
+				<input class="exportFilename" type="text" />
+			</li>
+			<li>
+				Include closing reference
+				<input class="includeClosing" type="radio" />
+			</li>
+			<li>
+				Map / Reduce period
+				<input class="timeValue" type="text" placeholder="number" />
+				<select class="timeUnit">
+					<option>seconds</option>
+					<option>minutes</option>
+				</select>
+			</li>
+			<li>
+				<input class="submitButton" type="submit" value="Calculate !" />
+			</li>
+		</ul>
+	</form>
+
+	<p>Result filename is : <span class="resultFile"></span></p>
+
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.form.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+
+</body>
+</html>

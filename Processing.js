@@ -50,7 +50,7 @@ function parseCESTTIme (timestring) {
 }
 
 function numberifyCommaNotation (strnum) {
-	return parseFloat(strnum.replace(/\./, '').split(',').join('.'));
+	return parseFloat(strnum.replace(/\./, '').split(',').join('.')).toFixed(2);
 }
 
 function convertStrtoNum (json) {
@@ -93,7 +93,9 @@ function splitIntraDay (json) {
 			day.push(element);
 		}
 		else if((status === closing) && day.length) {
-			day.push(element);
+			if(Config.includeClosing) {
+				day.push(element);
+			}
 			days.push(day);
 			day = [];
 		}

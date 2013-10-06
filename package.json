@@ -1,0 +1,9 @@
+{
+    "name": "panda-node",
+    "description": "Welcome to the CAC40 Intraday Parser and Analayser (PandA)",
+    "private": true,
+    "author": "Mickael van der Beek (https://github.com/Mickael-van-der-Beek)",
+    "dependencies": {
+        "express": "latest"
+    }
+}
